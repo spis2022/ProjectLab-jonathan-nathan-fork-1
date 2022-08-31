@@ -32,9 +32,9 @@ playerR = pygame.image.load(os.path.join("assets", "redFish.jpg")).convert()
 playerR.set_colorkey((255,255,255))
 playerR = pygame.transform.scale(playerR, (39, 24))
 
-# playerUp = pygame.image.load(os.path.join("assets", "blueFishUp.jpg")).convert()
-# playerUp.set_colorkey((255,255,255))
-# playerUp = pygame.transform.scale(playerUp, (39, 24))
+playerUp = pygame.image.load(os.path.join("assets", "fishUp.jpg")).convert()
+playerUp.set_colorkey((255,255,255))
+playerUp = pygame.transform.scale(playerUp, (39, 24))
 
 # playerUpB = pygame.image.load(os.path.join("assets", "blueFishUp.jpg")).convert()
 # playerUpB.set_colorkey((255,255,255))
@@ -182,7 +182,7 @@ while(running):
 
 
         if jumpState == True:
-            # screen.blit(playerUp, rect_player)
+            screen.blit(playerUp, rect_player)
             rect_player.move_ip(0, -10)
             jumpFrame += 1
         
@@ -210,7 +210,7 @@ while(running):
 
         if(startState):
             if gravity == True:
-                # screen.blit(playerDown, rect_player)
+                screen.blit(playerDown, rect_player)
                 rect_player.move_ip(0, gravitySpeed)
             if gravityB == True:
                 rect_playerB.move_ip(0, gravitySpeed)
